@@ -1,18 +1,12 @@
 import csv
 import numpy as np
 
-# Set the seed for reproducibility
 np.random.seed(42)
 
-# Define the number of students and years
 num_students = 20000
-num_years = 4
-
-# Define the GPA mean and standard deviation
+num_years = 8
 gpa_mean = 2.8
 gpa_std = 1
-
-# Create an empty list to store each student's data
 data = []
 
 # Generate the data for each student
