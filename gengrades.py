@@ -9,8 +9,8 @@ num_students = 20000
 num_years = 4
 
 # Define the GPA mean and standard deviation
-gpa_mean = 3.0
-gpa_std = 0.8
+gpa_mean = 2.8
+gpa_std = 1
 
 # Create an empty list to store each student's data
 data = []
