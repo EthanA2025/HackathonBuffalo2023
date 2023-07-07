@@ -93,15 +93,12 @@ def collate_fn(batch):
 
 def get_dataloader(csv_file, batch_size=32):
     dataset = SequenceDataset(csv_file)
-
-    dataloader = DataLoader(
+    return DataLoader(
         dataset,
         batch_size=batch_size,
         shuffle=True,  # Shuffle for training
         collate_fn=collate_fn,  # Use a custom collate function to handle variable-length sequences
     )
-
-    return dataloader
 
 
 if __name__ == "__main__":
@@ -113,7 +110,7 @@ if __name__ == "__main__":
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dataloader = get_dataloader('student_data.csv')
-
+    print(dataloader)
     train(model, criterion, optimizer, dataloader, device)
 
     print(evaluate(model, criterion, dataloader, device))
