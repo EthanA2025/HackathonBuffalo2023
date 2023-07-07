@@ -12,11 +12,12 @@ function App() {
   return (
     <div>
       <MainComp />
+      <br />
       <RowAdd />
       <CSVLoad />
       <Container>
         <RunScript />
-        {/* <img src="/regression.png" alt="data"></img> */}
+        <img src="/regression.png" alt="data"></img>
       </Container>
       
     </div>
