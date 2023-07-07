@@ -9,6 +9,10 @@ from sklearn.preprocessing import StandardScaler
 df = pd.read_csv('student_data.csv')
 df = df.drop('student_id', axis=1)
 # split the dataset into features (X) and target (y)
+<<<<<<< HEAD
+=======
+X = df[[f'gpa_year_{i+1}' for i in range(8)]]
+>>>>>>> 6105fa0410e5a1ef03f0607e66901cfc1ad8454e
 y = df['dropout']
 df = df.drop('dropout', axis=1)
 #X = df[[f'gpa_year_{i+1}' for i in range(8)]]
