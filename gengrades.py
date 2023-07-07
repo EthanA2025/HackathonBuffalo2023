@@ -1,12 +1,13 @@
 import csv
 import numpy as np
+import random
 
 np.random.seed(42)
 
 num_students = 20000
 num_years = 8
 gpa_mean = 2.5
-gpa_std = 1
+gpa_std = .8
 data = []
 
 # Generate the data for each student
@@ -18,7 +19,10 @@ for i in range(num_students):
     avg_gpa = np.mean(gpa_values)
     
     # Determine the dropout status
-    dropout = 1 if avg_gpa <= 1.5 else 0
+    if avg_gpa <= 2.2 and random.randint(0,4) == 1:
+        dropout = 1
+    else:
+        dropout = 0
     
     # Append the student's data to the list
     data.append([i+1] + list(gpa_values) + [dropout])
