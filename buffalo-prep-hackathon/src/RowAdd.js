@@ -25,7 +25,6 @@ function RowAdd() {
           <tr>
             <th>Student Name</th>
             <th>GPA</th>
-            {/* Repeat the table headers for the remaining fields */}
           </tr>
         </thead>
         <tbody>
@@ -33,7 +32,7 @@ function RowAdd() {
             <tr key={index}>
               <td>{row.field1}</td>
               <td>{row.field2}</td>
-              {/* Repeat the table cells for the remaining fields */}
+              <td>{row.field3}</td>
             </tr>
           ))}
         </tbody>

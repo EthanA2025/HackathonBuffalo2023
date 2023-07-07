@@ -20,14 +20,17 @@ const ModalForm = ({ isOpen, toggleModal, addRow }) => {
       <ModalHeader toggle={toggleModal}>Add Row</ModalHeader>
       <ModalBody>
         <FormGroup>
-          <Label for="field1">Field 1</Label>
+          <Label for="field1">Name</Label>
           <Input type="text" name="field1" id="field1" value={formData.field1 || ''} onChange={handleChange} />
         </FormGroup>
         <FormGroup>
-          <Label for="field2">Field 2</Label>
+          <Label for="field2">GPA</Label>
           <Input type="text" name="field2" id="field2" value={formData.field2 || ''} onChange={handleChange} />
         </FormGroup>
-        {/* Repeat the FormGroup and Input for the remaining fields */}
+        <FormGroup>
+          <Label for="field3">Dropout</Label>
+          <Input type="text" name="field2" id="field2" value={formData.field2 || ''} onChange={handleChange} />
+        </FormGroup>
       </ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={handleSubmit}>
