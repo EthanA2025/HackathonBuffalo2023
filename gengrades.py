@@ -21,11 +21,11 @@ for i in range(num_students):
     dropout = 1 if avg_gpa <= 1.5 else 0
     
     # Append the student's data to the list
-    data.append([i+1] + list(gpa_values))
+    data.append([i+1] + list(gpa_values) + [dropout])
 
 # Define the column headers
-headers = ['student_id'] + ['time']
-#f'gpa_year_{i+1}' for i in range(num_years)
+headers = ['student_id'] + [f'gpa_year_{i+1}' for i in range(num_years)] + ['dropout']
+#
 # Write the data to a CSV file
 with open('student_data.csv', 'w', newline='') as f:
     writer = csv.writer(f)

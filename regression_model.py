@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 df = pd.read_csv('student_data.csv')
 
 # split the dataset into features (X) and target (y)
-X = df[['GPA']]
+X = df[[f'gpa_year_{i+1}' for i in range(8)]]
 y = df['dropout']
 
 # it's a good practice to scale the features so they have a mean of 0 and standard deviation of 1
