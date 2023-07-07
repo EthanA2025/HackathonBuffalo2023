@@ -9,6 +9,7 @@ function App() {
     <div>
       <MainComp />
       <CSVLoad />
+      <img src="data.jpg" alt="regression data"></img>
     </div>
   );
 }
