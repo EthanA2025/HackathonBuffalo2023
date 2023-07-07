@@ -19,12 +19,12 @@ function RowAdd() {
       <Button color="primary" onClick={toggleModal}>
         Add Row
       </Button>
-
       <Table>
         <thead>
           <tr>
             <th>Student Name</th>
             <th>GPA</th>
+            <th>Dropout</th>
           </tr>
         </thead>
         <tbody>

@@ -29,7 +29,7 @@ const ModalForm = ({ isOpen, toggleModal, addRow }) => {
         </FormGroup>
         <FormGroup>
           <Label for="field3">Dropout</Label>
-          <Input type="text" name="field2" id="field2" value={formData.field2 || ''} onChange={handleChange} />
+          <Input type="text" name="field3" id="field3" value={formData.field2 || ''} onChange={handleChange} />
         </FormGroup>
       </ModalBody>
       <ModalFooter>

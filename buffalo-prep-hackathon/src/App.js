@@ -5,17 +5,20 @@ import MainComp from './MainComponent';
 import CSVLoad from './CSVLoad';
 import { Container } from 'reactstrap';
 import RowAdd from './RowAdd';
+import RunScript from './RunScript';
 
 function App() {
   
   return (
     <div>
       <MainComp />
+      <RowAdd />
       <CSVLoad />
       <Container>
-        <img src="/regression.png" alt="data"></img>
+        <RunScript />
+        {/* <img src="/regression.png" alt="data"></img> */}
       </Container>
-      <RowAdd />
+      
     </div>
   );
 }
