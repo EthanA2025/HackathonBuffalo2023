@@ -8,11 +8,7 @@ class SequencePredictor(nn.Module):
 
         self.hidden_size = hidden_size
         self.num_layers = num_layers
-
-        # LSTM layer
         self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
-
-        # Output layer
         self.fc = nn.Linear(hidden_size, output_size)
 
     def forward(self, x, lengths):
@@ -23,7 +19,6 @@ class SequencePredictor(nn.Module):
         h0 = torch.zeros(self.num_layers, x.batch_sizes[0], self.hidden_size).to(x.data.device)
         c0 = torch.zeros(self.num_layers, x.batch_sizes[0], self.hidden_size).to(x.data.device)
 
-        # LSTM forward pass
         out, _ = self.lstm(x, (h0, c0))
 
         # Unpack the output sequences

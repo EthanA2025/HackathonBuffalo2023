@@ -110,7 +110,7 @@ if __name__ == "__main__":
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dataloader = get_dataloader('student_data.csv')
-    print(dataloader)
+
     train(model, criterion, optimizer, dataloader, device)
 
     print(evaluate(model, criterion, dataloader, device))
