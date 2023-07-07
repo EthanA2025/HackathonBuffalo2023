@@ -4,18 +4,13 @@ import {
   NavbarBrand,
   Container,
 } from 'reactstrap';
-import CSVLoad from './CSVLoad';
 
-function MainComp(args) {
-
+function MainComp() {
   return (
     <div>
       <Navbar dark style={{ backgroundColor: 'gray' }}>
         <NavbarBrand href="/">Teacher Database</NavbarBrand>
       </Navbar>
-      <div>
-        <CSVLoad />
-      </div>
     </div>
   );
 }
